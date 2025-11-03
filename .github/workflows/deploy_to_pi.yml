@@ -1,0 +1,23 @@
+name: Deploy n8n configs to Pi
+
+on:
+  push:
+    paths-ignore:
+      - '*README.md'
+      - '.github/ISSUE_TEMPLATE/**'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true 
+
+defaults:
+  run:
+    working-directory: /actions-runner/files/n8n  
+
+jobs:   
+  checkout-code:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
