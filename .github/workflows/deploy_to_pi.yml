@@ -13,7 +13,7 @@ concurrency:
 
 defaults:
   run:
-    working-directory: /actions-runner/files/n8n  
+    working-directory: /actions-runner/files/n8n/workflows  
 
 jobs:   
   checkout-code:
