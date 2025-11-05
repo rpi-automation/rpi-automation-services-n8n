@@ -10,11 +10,7 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true 
-
-defaults:
-  run:
-    working-directory: /actions-runner/files/n8n/workflows  
-
+  
 jobs:   
   checkout-code:
     runs-on: self-hosted
