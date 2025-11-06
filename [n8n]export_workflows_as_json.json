@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2025-11-05T18:09:46.000Z",
+  "updatedAt": "2025-11-06T10:43:23.000Z",
   "createdAt": "2025-11-04T16:06:57.059Z",
   "id": "jI0eluzoWugt2xFi",
   "name": "[n8n]export_workflows_as_json",
@@ -37,6 +37,7 @@
         "operation": "toJson",
         "mode": "each",
         "options": {
+          "format": true,
           "fileName": "={{ $json.name }}.json"
         }
       },
@@ -259,7 +260,7 @@
     "templateCredsSetupCompleted": true
   },
   "pinData": {},
-  "versionId": "1a755000-4588-4d27-aa20-a3a1cb103888",
+  "versionId": "fa4d1d59-4734-4a51-a638-581e937530f6",
   "triggerCount": 0,
   "shared": [
     {
